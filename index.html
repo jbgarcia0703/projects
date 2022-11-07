@@ -1,13 +1,164 @@
 <html>
     <head>
         <title>My Projects</title>
+        <link rel="shortcut icon" href="jupiter.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="slideshow.css" rel="stylesheet">
+        <script src="slideshow.js"></script>
+        <script>
+            function overlayOn(n) {
+                currentSlide(n);
+                document.getElementById("overlay").style.display = "block";
+            }
+            
+            function overlayOff(e) {
+                document.getElementById("overlay").style.display = "none";
+            }
+
+            function childStopPropagation(e) {
+                e.stopPropagation();
+            }
+        </script>
     </head>
     <body>
-        <img src="1. Property Management App.png" alt="">
-        <br>
-        <img src="2. Speech Analytics.JPG" alt="">
-        <br>
-        <img src="3. Revenue Dashboard.JPG" alt="">        
-    </body>
+        <div class="div-details">
+            <h1>Jake Garcia</h1>
+            <div>
+                Contacts
+                <ul>
+                    <li>jbgarcia0703@gmail.com</li>
+                    <li>PH Manila</li>
+                </ul>
+            </div>
+            <div>
+                Services
+                <ul>
+                    <li>Web Apps</li>
+                    <li>Mobile Apps</li>
+                    <li>Desktop Apps</li>
+                    <li>ETL</li>
+                    <li>Buiness Intelligence</li>
+                </ul>
+            </div>
+            <div>
+                Tools
+                <ul>
+                    <li>Angular</li>
+                    <li>React Native</li>
+                    <li>Android Kotlin</li>
+                    <li>ASP</li>
+                    <li>PHP</li>
+                    <li>NodeJs</li>
+                    <li>.NET Core</li>
+                    <li>SQL / SSIS / SSAS / SSRS</li>
+                    <li>MySQL / MongoDB</li>
+                    <li>Power BI / QlikView</li>
+                    <li>Azure Data Factory</li>
+                    <li>Azure Data Lake</li>
+                    <li>Azure DevOps</li>
+                    <li>Databricks</li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-projects">
+            <h3>PROJECTS</h3>
 
+            <div class="div-projects-item">
+                2020 <br>
+                <img src="projects/thumbnail/1. Property Management App.png" class="img-thumbnail" onclick="overlayOn(1)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2019 <br>
+                <img src="projects/thumbnail/2. Speech Analytics.JPG" class="img-thumbnail" onclick="overlayOn(2)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2019 <br>
+                <img src="projects/thumbnail/5. Property Listing.png" class="img-thumbnail" onclick="overlayOn(3)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2018 <br>
+                <img src="projects/thumbnail/3. Revenue Dashboard.JPG" class="img-thumbnail" onclick="overlayOn(4)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2018 <br>
+                <img src="projects/thumbnail/4. Facebook Dashboard.JPG" class="img-thumbnail" onclick="overlayOn(5)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2018 <br>
+                <img src="projects/thumbnail/6. People management.png" class="img-thumbnail" onclick="overlayOn(6)" alt="">
+            </div>
+            <div class="div-projects-item">
+                2017 <br>
+                <img src="projects/thumbnail/7. Parking App.png" class="img-thumbnail" onclick="overlayOn(7)" alt="">
+            </div> 
+
+        </div>
+        <!-- <div style="clear: both;"></div> -->
+        <div id="overlay" onclick="overlayOff(this)">
+            <div id="div-slideshow" onclick="childStopPropagation(event)">                
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 7</div>
+                        <img src="projects/1. Property Management App.png" class="img-full" alt="">
+                        <div class="text">Property Management App</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 7</div>
+                        <img src="projects/2. Speech Analytics.JPG" class="img-full" alt="">
+                        <div class="text">Speech Analytics</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 7</div>
+                        <img src="projects/5. Property Listing.png" class="img-full" alt="">
+                        <div class="text">Revenue Dashboard</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 7</div>
+                        <img src="projects/3. Revenue Dashboard.JPG" class="img-full" alt="">
+                        <div class="text">Facebook Dashboard</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 7</div>
+                        <img src="projects/4. Facebook Dashboard.JPG" class="img-full" alt="">
+                        <div class="text">Property Listing</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 7</div>
+                        <img src="projects/6. People management.png" class="img-full" alt="">
+                        <div class="text">People management</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 7</div>
+                        <img src="projects/7. Parking App.png" class="img-full" alt="">
+                        <div class="text">Parking App</div>
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>

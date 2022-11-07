@@ -1,0 +1,77 @@
+html {
+    font-family: 'Roboto Slab', serif;
+}
+.img-thumbnail {
+    border: 1px solid #ccc; 
+    border-radius: 5px;  
+    padding: 3px; 
+    width: 250px; 
+    height: 250px;
+}
+.img-thumbnail:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.img-full {
+    width: 100%;
+}
+
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+#div-slideshow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: white; 
+    padding: 25px;
+    width: 80%;
+}
+
+.div-details {
+    float: left; 
+    padding: 15px;
+}
+.div-projects {
+    float: left; 
+    padding: 25px; 
+    width: 70%;
+}            
+@media (min-width: 500px) {
+    .div-projects {
+        width: 50%;
+    }
+}
+@media (min-width: 800px) {
+    .div-projects {
+        width: 60%;
+    }
+}
+@media (min-width: 1050px) {
+    .div-projects {
+        width: 70%;
+    }
+}
+@media (min-width: 1100px) {
+    .div-projects {
+        width: 70%;
+    }
+}
+
+.div-projects-item {
+    float: left; 
+    padding: 5px;
+}
